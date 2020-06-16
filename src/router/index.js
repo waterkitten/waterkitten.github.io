@@ -1,60 +1,84 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [{
-    path: '/',
-    name: 'logic',
-    component: () => import( /* webpackChunkName: "about" */ '../views/logic.vue')
-  },
+export default new Router({
+  mode: 'history',
+  routes: [{
+      path: '/eventlist',
+      name: "event-list",
+      component: () => import("../components/vueshow/EventList.vue")
 
-  {
-    path: '/findProject',
-    name: 'Home',
-    component: () => import( /* webpackChunkName: "about" */ '../views/Find.vue')
-  },
-  {
-    path: '/communityActivity',
-    name: 'About',
+    },
+    {
+      path: "/eventcreate",
+      name: "event-create",
+      component: () => import("../components/vueshow/EventCreate.vue")
+    },
+    {
+      path: '/',
+      name: 'logic',
+      component: () => import( /* webpackChunkName: "about" */ '../views/logic.vue')
+    },
+    {
+      path: "/",
+      name: 'card',
+      component: () => import("../components/vueshow/cardshow.vue")
 
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Commu.vue')
-  },
-  {
-    path: '/publishProject',
-    name: 'Public',
+    },
 
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/publish.vue')
-  },
-  {
-    path: '/personalCenter',
-    name: 'Person',
+    {
+      path: '/findProject',
+      name: 'Home',
+      component: () => import( /* webpackChunkName: "about" */ '../views/Find.vue')
+    },
+    {
+      path: '*',
+      name: 'error',
+      component: () => import( /* webpackChunkName: "about" */ '../views/FileNotFound.vue')
+    },
+    {
+      path: '/communityActivity',
+      name: 'About',
 
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Person.vue')
-  },
-  {
-    path: '/manageCenter',
-    name: 'manage',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import( /* webpackChunkName: "about" */ '../views/Commu.vue')
+    },
+    {
+      path: '/publishProject',
+      name: 'Public',
 
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Manage.vue')
-  }
-]
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import( /* webpackChunkName: "about" */ '../views/publish.vue')
+    },
+    {
+      path: '/personalCenter',
+      name: 'Person',
 
-const router = new VueRouter({
-  routes
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import( /* webpackChunkName: "about" */ '../views/Person.vue')
+    },
+    {
+      path: '/manageCenter',
+      name: 'manage',
+
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import( /* webpackChunkName: "about" */ '../views/Manage.vue')
+    },
+
+  ]
+
+
+
+
 })
-
-export default router
