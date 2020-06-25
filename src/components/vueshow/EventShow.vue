@@ -33,8 +33,10 @@
 </template>
 <script>
 import EventService from "../../EventService/EventServe.js";
-import { mapState } from "vuex";
+import { mapState, mapAction } from "vuex";
 import BaseIcon from "./BaseIcon.vue";
+import store from "../../store/store";
+import NProgress from "nprogress";
 export default {
   components: {
     BaseIcon,
@@ -42,11 +44,9 @@ export default {
   },
   props: ["id"],
 
-  data () {
-    return {
-      event: {}
-    };
-  },
+  computed: mapState({
+    event: state => state.event.event
+  }),
   created () {
     EventService.getEvent(this.id)
       .then(response => {
@@ -56,6 +56,13 @@ export default {
         console.log("There was an error:", error.response);
       });
     this.$store.dispatch("fetchEvent", this.id);
+  },
+  beforeRouteEnter (routeTo, routeFrom, next) {
+    NProgress.start(); // Start the progress bar
+    store.dispatch("event/fetchEvent", routeTo.params.id).then(() => {
+      NProgress.done(); // When the action is done complete progress bar
+      next(); // Only once this is called does the navigation continue
+    });
   }
 };
 </script>
