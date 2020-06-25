@@ -1,68 +1,41 @@
-## 阶段一： vue项目首页的搭建
+# water-test
 
-**实现过程**
+## Project setup
 
- 1. header区域开发
- 2. iconfont的使用和代码优化
- 3. 轮播图
- 4. 图标区域布局
- 5. 图标的区域逻辑实现
- 6. 热销推荐组件开发
- 7. 开发周末游组件
- 8. 使用axios发送ajax请求
- 9. 首页父子组件间传值
+```
+npm install
+```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200515211824865.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N6dXdhdGVyYnJvdGhlcg==,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200516143954670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N6dXdhdGVyYnJvdGhlcg==,size_16,color_FFFFFF,t_70)
+### Compiles and hot-reloads for development
 
- - [VUE快速搭建轮播图](https://blog.csdn.net/szuwaterbrother/article/details/106132833)
- - [VUE实现css样式以及图片防抖动优化](https://blog.csdn.net/szuwaterbrother/article/details/106147740)
+```
+npm run serve
+```
 
- - [VUE矢量图布局以及轮播效果](https://blog.csdn.net/szuwaterbrother/article/details/106158131)
+### Compiles and minifies for production
 
+```
+npm run build
+```
 
+### Lints and fixes files
 
-## 阶段二： 实现数据列表的动态渲染
-**实现过程**
- 1. 路由配置
- 2. 搜索框布局
- 3. 列表布局（静态）
- 4. 页面滚动效果和字母布局
- 5. 动态数据渲染（axios请求接入json数据）
- 6. 兄弟组件传值
- 7. 列表性能优化
- 8. 搜索框逻辑实现
- 9. vuex实现数据共享
-10. vuex的高级使用和localStorage
- 11.  keep-alive实现请求数据缓存以优化网页性能
+```
+npm run lint
+```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200517235535317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N6dXdhdGVyYnJvdGhlcg==,size_16,color_FFFFFF,t_70)
+### Customize configuration
 
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
+项目便签后续添加功能的细节
 
- - [VUE如何用axios渲染json数据](https://blog.csdn.net/szuwaterbrother/article/details/106183612)
-
- - [Vue搜索框的查询功能实现](https://blog.csdn.net/szuwaterbrother/article/details/106195515)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200518164646787.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N6dXdhdGVyYnJvdGhlcg==,size_16,color_FFFFFF,t_70)
-
-
-关于vuex，一张图就好了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200519173906292.gif)
-**开源源码**
-
- - [轮播图———search-logic](https://github.com/waterbrother2019122132/vue-.git)
- - [vuex操作流程](https://blog.csdn.net/szuwaterbrother/article/details/106223077)
-## 阶段三： 页面详情
-
-**实现过程**
-
- 1. 动态路由和banner的布局
- 2. vue项目详情页—公用图片画廊
- 3. vue实现标题栏的渐隐渐显效果
- 4. 全局事件解绑（指window）
- 5. 递归组件实现列表布局
- 6. 动态获取详情页面数据
- 7. 项目基础动画插入（transition）
-
-**开源源码**
-[轮播图———detail](https://github.com/waterbrother2019122132/vue-.git)
+第一个核心任务：Progress Bar: Axios Interceptors
+Axios interceptors (in this lesson)
+In-component route guards (next lesson)
+Global and per-route guards (lesson after that)
+说白就是进度条功能，然后是用
+\$ json-server -d 1500 db.json
+这种强行加延迟的方式去进行“假性缓存”测试的
+存在以下问题：
+无法同时调多个 api
