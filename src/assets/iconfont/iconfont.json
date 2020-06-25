@@ -1,0 +1,79 @@
+{
+  "id": "1889450",
+  "name": "vue水哥项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14748446",
+      "name": "儿童手绘-火箭",
+      "font_class": "ertongshouhui-huojian",
+      "unicode": "ea9a",
+      "unicode_decimal": 60058
+    },
+    {
+      "icon_id": "14748448",
+      "name": "儿童手绘-男孩",
+      "font_class": "ertongshouhui-nanhai",
+      "unicode": "ea9b",
+      "unicode_decimal": 60059
+    },
+    {
+      "icon_id": "14748453",
+      "name": "儿童手绘-太阳",
+      "font_class": "ertongshouhui-taiyang",
+      "unicode": "ea9e",
+      "unicode_decimal": 60062
+    },
+    {
+      "icon_id": "14748455",
+      "name": "儿童手绘-星星",
+      "font_class": "ertongshouhui-xingxing",
+      "unicode": "eaa0",
+      "unicode_decimal": 60064
+    },
+    {
+      "icon_id": "14748462",
+      "name": "儿童手绘-星球",
+      "font_class": "ertongshouhui-xingqiu",
+      "unicode": "eaa3",
+      "unicode_decimal": 60067
+    },
+    {
+      "icon_id": "14748470",
+      "name": "儿童手绘-圣诞树",
+      "font_class": "ertongshouhui-shengdanshu",
+      "unicode": "eaa5",
+      "unicode_decimal": 60069
+    },
+    {
+      "icon_id": "14748472",
+      "name": "儿童手绘-小熊",
+      "font_class": "ertongshouhui-xiaoxiong",
+      "unicode": "eaa6",
+      "unicode_decimal": 60070
+    },
+    {
+      "icon_id": "14748474",
+      "name": "儿童手绘-铅笔",
+      "font_class": "ertongshouhui-qianbi",
+      "unicode": "eaa8",
+      "unicode_decimal": 60072
+    },
+    {
+      "icon_id": "14748498",
+      "name": "儿童手绘-汽车",
+      "font_class": "ertongshouhui-qiche",
+      "unicode": "eab3",
+      "unicode_decimal": 60083
+    },
+    {
+      "icon_id": "14748500",
+      "name": "儿童手绘-书本",
+      "font_class": "ertongshouhui-shuben",
+      "unicode": "eab5",
+      "unicode_decimal": 60085
+    }
+  ]
+}

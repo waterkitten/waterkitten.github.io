@@ -1,22 +1,31 @@
 <template>
-  <router-link class="event-link"
-               :to="{ name: 'event-show', params: { id: event.id } }">
+  <router-link :to="{ name: 'card', params: { id: '1' } }">
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
       <h4 class="title">{{ event.title }}</h4>
-      <BaseIcon name="users"></BaseIcon>
+      <span>{{ event.attendees.length }} 浏览量</span>
     </div>
+    <slot></slot>
   </router-link>
 </template>
 
 <script>
-import BaseIcon from "../components/vueshow/BaseIcon.vue";
 export default {
-  components: {
-    BaseIcon
-  },
-  props: {
-    event: Object
+  name: "Icon",
+  data () {
+    return {
+      title: "Park Cleanup",
+      event: {
+        id: 1,
+        title: "Beach Cleanup",
+        date: "Tue May 15 2018",
+        time: "6:00",
+        attendees: [
+          { id: "abc123", name: "Adam Jahr" },
+          { id: "def456", name: "Gregg Pollack" }
+        ]
+      }
+    };
   }
 };
 </script>
@@ -27,9 +36,6 @@ export default {
   margin-bottom: 24px;
   transition: all 0.2s linear;
   cursor: pointer;
-  background-color: white;
-  text-shadow: 0 0 black;
-  box-shadow: 6px 0px 10px 1px black;
 }
 .event-card:hover {
   transform: scale(1.01);
@@ -38,6 +44,7 @@ export default {
 .event-card > .title {
   margin: 0;
 }
+
 .event-link {
   color: black;
   text-decoration: none;

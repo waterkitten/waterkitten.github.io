@@ -1,16 +1,14 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [{
-      path: '/eventlist',
+      path: "/eventlist",
       name: "event-list",
       component: () => import("../components/vueshow/EventList.vue")
-
     },
     {
       path: "/eventcreate",
@@ -18,67 +16,78 @@ export default new Router({
       component: () => import("../components/vueshow/EventCreate.vue")
     },
     {
-      path: '/',
-      name: 'logic',
-      component: () => import( /* webpackChunkName: "about" */ '../views/logic.vue')
-    },
-    {
       path: "/",
-      name: 'card',
-      component: () => import("../components/vueshow/cardshow.vue")
-
+      name: "logic",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/logic.vue")
+    },
+    {
+      path: "/card",
+      name: "card",
+      component: () => import("../components/vueshow/EventShow.vue")
     },
 
     {
-      path: '/findProject',
-      name: 'Home',
-      component: () => import( /* webpackChunkName: "about" */ '../views/Find.vue')
+      path: "/findProject",
+      name: "Home",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/Find.vue")
     },
     {
-      path: '*',
-      name: 'error',
-      component: () => import( /* webpackChunkName: "about" */ '../views/FileNotFound.vue')
+      path: "*",
+      name: "error",
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/FileNotFound.vue")
     },
     {
-      path: '/communityActivity',
-      name: 'About',
+      path: "/communityActivity",
+      name: "About",
 
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import( /* webpackChunkName: "about" */ '../views/Commu.vue')
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/Commu.vue")
     },
     {
-      path: '/publishProject',
-      name: 'Public',
+      path: "/publishProject",
+      name: "Public",
 
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import( /* webpackChunkName: "about" */ '../views/publish.vue')
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/publish.vue")
     },
     {
-      path: '/personalCenter',
-      name: 'Person',
+      path: "/personalCenter",
+      name: "Person",
 
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import( /* webpackChunkName: "about" */ '../views/Person.vue')
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/Person.vue")
     },
     {
-      path: '/manageCenter',
-      name: 'manage',
+      path: "/manageCenter",
+      name: "manage",
 
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import( /* webpackChunkName: "about" */ '../views/Manage.vue')
+      component: () =>
+        import( /* webpackChunkName: "about" */ "../views/Manage.vue")
     },
+    {
+      path: "/event/:id",
+      name: "event-show",
+      component: () => import("../components/vueshow/EventShow.vue"),
+      props: true
 
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+    }
   ]
-
-
-
-
-})
+});
