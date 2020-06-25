@@ -5,7 +5,7 @@
       <img src="http://rxd.capcom.com.tw/assets/images/tt1.png"
            class="TitleHeader" />
 
-      <EventCard v-for="event in events"
+      <EventCard v-for="event in event.events"
                  :key="event.id"
                  :event="event" />
       <template v-if="page != 1">
@@ -13,7 +13,8 @@
                      rel="prev">Prev Page</router-link>
         |
       </template>
-      <router-link :to="{ name: 'event-list', query: { page: page + 1 } }">Next Page</router-link>
+      <router-link v-if="hasNextPage"
+                   :to="{ name: 'event-list', query: { page: page + 1 } }">Next Page</router-link>
     </div>
 
     <div style="width:50%">
@@ -27,7 +28,7 @@
            class="TitleHeader1" />
       <img src="http://rxd.capcom.com.tw/assets/images/loading.gif"
            class="TitleHeader1" />
-      <EventCard v-for="event in events"
+      <EventCard v-for="event in event.events"
                  :key="event.id"
                  :event="event" />
     </div>
@@ -37,7 +38,6 @@
 <script>
 import EventService from "../../EventService/EventServe.js"; // <--- brings in the axios library
 import EventCard from "../EventCard.vue";
-
 import { mapState } from "vuex";
 export default {
   components: {
@@ -45,8 +45,8 @@ export default {
   },
 
   created () {
-    this.$store.dispatch("fetchEvents", {
-      perPage: 5,
+    this.$store.dispatch("event/fetchEvents", {
+      perPage: this.perPage,
       page: this.page
     });
   },
@@ -57,7 +57,7 @@ export default {
     hasNextPage () {
       return this.eventsTotal > this.page * this.perPage;
     },
-    ...mapState(["events", "eventsTotal"])
+    ...mapState(["events", "eventsTotal", "event", "user"])
   }
 };
 </script>

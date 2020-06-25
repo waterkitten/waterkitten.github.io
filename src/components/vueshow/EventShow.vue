@@ -37,6 +37,7 @@ import { mapState, mapAction } from "vuex";
 import BaseIcon from "./BaseIcon.vue";
 import store from "../../store/store";
 import NProgress from "nprogress";
+
 export default {
   components: {
     BaseIcon,
@@ -47,15 +48,9 @@ export default {
   computed: mapState({
     event: state => state.event.event
   }),
+  methods: mapAction("event", ["fetchEvent"]),
   created () {
-    EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data;
-      })
-      .catch(error => {
-        console.log("There was an error:", error.response);
-      });
-    this.$store.dispatch("fetchEvent", this.id);
+    this.fetchEvent(this.id);
   },
   beforeRouteEnter (routeTo, routeFrom, next) {
     NProgress.start(); // Start the progress bar
