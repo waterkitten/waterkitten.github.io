@@ -1,14 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
-
+import store from "../store/store";
+import NProgress from "nprogress";
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: "history",
   routes: [{
       path: "/eventlist",
       name: "event-list",
-      component: () => import("../components/vueshow/EventList.vue")
+      component: () => import("../components/vueshow/EventList.vue"),
+      props: true
     },
     {
       path: "/eventcreate",
@@ -83,11 +85,26 @@ export default new Router({
       path: "/event/:id",
       name: "event-show",
       component: () => import("../components/vueshow/EventShow.vue"),
-      props: true
-
+      props: true,
+      beforeEnter(routeTo, routeFrom, next) {
+        store.dispatch("event/fetchEvent", routeTo.params.id).then(event => {
+          routeTo.params.event = event;
+          next();
+        });
+      }
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
     }
   ]
 });
+router.beforeEach((routeTo, routeFrom, next) => {
+  NProgress.start();
+  next();
+});
+
+router.afterEach(() => {
+  NProgress.done();
+});
+
+export default router;

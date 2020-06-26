@@ -49,7 +49,7 @@
 <script>
 import EventService from "../../EventService/EventServe";
 import Datepicker from "vuejs-datepicker";
-
+import NProgress from "nprogress"; // <--- Include NProgress
 export default {
   components: {
     Datepicker,
@@ -68,13 +68,19 @@ export default {
   },
   methods: {
     createEvent () {
+      NProgress.start();
       this.$store
-        .dispatch("createEvent", this.event)
+        .dispatch("event/createEvent", this.event)
         .then(() => {
+          this.$router.push({
+            name: "event-show",
+            params: { id: this.event.id }
+          });
           this.event = this.createFreshEventObject();
         })
         .catch(() => {
           console.log("There was a problem creating your event.");
+          NProgress.done();
         });
     },
 

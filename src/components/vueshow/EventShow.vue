@@ -33,7 +33,7 @@
 </template>
 <script>
 import EventService from "../../EventService/EventServe.js";
-import { mapState, mapAction } from "vuex";
+import { mapState, mapActions } from "vuex";
 import BaseIcon from "./BaseIcon.vue";
 import store from "../../store/store";
 import NProgress from "nprogress";
@@ -48,7 +48,7 @@ export default {
   computed: mapState({
     event: state => state.event.event
   }),
-  methods: mapAction("event", ["fetchEvent"]),
+  methods: mapActions("event", ["fetchEvent"]),
   created () {
     this.fetchEvent(this.id);
   },

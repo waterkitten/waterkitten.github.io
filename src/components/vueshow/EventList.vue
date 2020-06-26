@@ -45,6 +45,7 @@ export default {
   },
 
   created () {
+    this.perPage = 4;
     this.$store.dispatch("event/fetchEvents", {
       perPage: this.perPage,
       page: this.page
