@@ -1,0 +1,467 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="waterkitten" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="waterkitten" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="waterkitten" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2022/02/22/Designing-a-minting-app/">
+
+
+
+  <title>
+Designing a minting app |
+waterkitten = waterkitten</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Designing a minting app
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-02-22 20:55:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-02-22T20:55:01+08:00">2022-02-22</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">waterkitten</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?713812"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?566691"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?338897"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?385495"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?615894"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/gqapi/gqapi.php?410196"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/22/Designing-a-minting-app/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="waterkitten">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="waterkitten">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>Designing a minting app</p>
+<p>我们的<span class="exturl" data-url="aHR0cHM6Ly9uZnRzY2hvb2wuZGV2L3R1dG9yaWFsL21pbnRpbmctc2VydmljZS8="> minting service tutorial</span> 展示了如何使用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2F1c3RpbnRncmlmZml0aC9zY2FmZm9sZC1ldGg="> scaffold-eth</span> 创建一个可以在以太坊上打造 nft 的简单 web 应用。</p>
+<p>在本文章中，我们稍微换个角度来把事情讲清楚：为了帮助您更全面地了解打造 NFT 的问题，我们不讨论 nft 铸造的基本机制，而是来一起去思考成功打造一个铸币平台所要考虑的各个部分。如果你考虑从头打造一个 minting app，那这份高级架构概述能帮你完成这个决策过程。</p>
+<h3 id="前期做重点决策"><a class="markdownIt-Anchor" href="#前期做重点决策">#</a> 前期做重点决策</h3>
+<p>在任何开发项目的早期设计阶段，您可以做的最重要的事情之一，就是确定您的设计中以后最固定最不容易更改的部分。对于区块链项目来说尤其如此，在区块链项目中，数据很多都是长期存在且不被轻易篡改的，而且发布的数据修改成本高昂。</p>
+<h4 id="使用什么平台"><a class="markdownIt-Anchor" href="#使用什么平台">#</a> 使用什么平台？</h4>
+<p>在您开始构建您的 minting app 之前，您需要决定在哪个区块链平台上构建。这是一个复杂的决定，因为在你的设计思路去落地的时候，需要权衡技术、社会和业务方面的所有因素。当你决定一个平台时，这里有一些关键问题需要思考：</p>
+<ul>
+<li>该平台是否活跃且不断发展？这不仅仅考虑平台是否有人气那么简单；一个活跃的、不断发展的开发者社区对于帮助您解决构建过程中遇到的障碍至关重要。</li>
+<li>您相信该平台的长期前景吗？花时间和精力开发一个随着时间的推移不再相关的平台没有多大意义。</li>
+<li>新用户加入平台的成本和难度高吗？如果一个平台上面做开发成本低，但用户体验不太理想，那么后面将会很痛苦。</li>
+<li>该平台的技术上的限制对你想法的实现影响大吗，无论是现在还是长期？例如，NFT School 上的许多示例都使用以太坊，但交易限制和 gas fee 可能会影响你的开发。</li>
+</ul>
+<h4 id="你需要后端吗"><a class="markdownIt-Anchor" href="#你需要后端吗">#</a> 你需要后端吗？</h4>
+<p>区块链网络上一个很棒的事情是，他们不需要一个中心化的点去协调和控制，完全可以由去运行一个去中心的应用。现今有些应用已经落地了，特别是在 defi 领域，应用程序运行所需的所有信息都可以存在于链上。</p>
+<p>NFT 通常将链上数据与现实资产和链下的结构化元数据相结合，管理这些资产通常需要一定的服务支持（可以理解为后端支持）。例如，如果你为用户定制化铸造 nft 或者说你的 nft 在应用程序上被许多用户所预览，你可能需要建立一个用户的账号系统和一些一个 profile page（用户个人消息页面）去修改用户个人信息。你可能还需要一些能有反馈的元素，比如评论啊，赞赏之类的，这些消息在传统数据库中的写入成本很低，但对于上链来说就太昂贵了。</p>
+<p>对于当今的大多数 NFT 应用程序，后端系统还是有必要的。但是，可能存在安全考虑；例如，直接与区块链交互时，通常最好使用 MetaMask 钱包，以便用户可以直接用私钥交易。</p>
+<h3 id="测试和基础设施"><a class="markdownIt-Anchor" href="#测试和基础设施">#</a> 测试和基础设施</h3>
+<p>区块链的试错成本很高昂，可以在代码确保没有问题前必要不要在主网上尝试任何操作。可以多依赖测试来保证代码的运行符合预期。您可能需要针对不同标准来修改测试环境，例如速度或者环境的保真度。</p>
+<p>测试时，可以采用集成测试和端对端的测试来补充单元测试，这个测试主要是基于你的 web app 和后端以及你的区块链真实平台环境之间的。理想情况下，应该可以在一个高仿真的环境中做完整个堆栈的测试。</p>
+<h3 id="合同设计"><a class="markdownIt-Anchor" href="#合同设计">#</a> 合同设计</h3>
+<h4 id="链上逻辑"><a class="markdownIt-Anchor" href="#链上逻辑">#</a> 链上逻辑</h4>
+<p>除了 ERC-721 等标准提供的基本所有权和转移机制之外，大部分 NFT 不需要太多的自定义链上逻辑 。 但是，如果您正在设计一个更复杂的系统，您可能需要将一些自定义逻辑加入到您的合约中。</p>
+<p>一般来说，在开发的过程中，只有当你想要修改区块链的状态且给一些些链上的状态进行输入时候，才可能要去编写链上的时间。例如，如果我们正在编写<span class="exturl" data-url="aHR0cHM6Ly93d3cuY3J5cHRva2l0dGllcy5jby8="> CryptoKitties</span> 的克隆，将用户的小猫集合读入 JavaScript 应用程序，写程序去判断猫咪是否能生 “小猫咪”，然后记录新交易以创建 “小猫咪 “，这是有风险的操作。这是因为区块链本质上是异步的，而且无法保证事物一致性。在这个例子中，当创建 “小猫咪” 的交易被处理时，它的主人可能已经卖掉了 “父母”。</p>
+<p>通过在单个合约函数中捕获状态修改的读取和写入组件状态，您可以确保一切都在单个事务中执行，因此保证事务一致。这种方法的缺点是您可能还需要在链上存储更多状态，这在以太坊等通用链上的开发成本就会增加。对于复杂的合约机制来说，您可能需要研究其他项目一下，比如 Flow ，它最初是为了支持 CryptoKitties 用例而创建的，此后成为许多成功项目的基础，包括 NBA Top Shot 和其他备受瞩目的市场。</p>
+<h4 id="可升级性"><a class="markdownIt-Anchor" href="#可升级性">#</a> 可升级性</h4>
+<p>大多数成功的 Web 应用程序都会不断更新修改，但智能合约在默认情况下是不可变的并且难以更改。在您部署到主网之前，请考虑使用类似于<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9wZW56ZXBwZWxpbi5jb20vdXBncmFkZXMtcGx1Z2lucy8xLngv"> OpenZeppelin Upgrades plugin</span>  。 这增加了一个间接层，允许您将更新推送到已部署的合约，而无需所有用户连接到新的合约地址。尽管说会增加流程的复杂度以及更多的 gas 费，但这样会避免后续无法更新而造成的更大开销。</p>
+<h4 id="用户认证授权体系"><a class="markdownIt-Anchor" href="#用户认证授权体系">#</a> 用户认证 / 授权体系</h4>
+<p>如果您的应用程序提供给多名用户使用，那您将需要一些方法来让他们登陆并跟踪状态。幸运的是，区块链帐户可以增加或替换传统的用户凭据，例如用户名和密码。</p>
+<h3 id="基于钱包的身份验证"><a class="markdownIt-Anchor" href="#基于钱包的身份验证">#</a> 基于钱包的身份验证</h3>
+<p>可以将基于密码的身份验证替换为基于钱包的身份验证。这通过在应用程序的后端系统中记录用户的公共地址来实现。当用户想要登录时，后端会提供一个随机值（或 nonce）进行签名，然后用户使用 MetaMask 等钱包使用其私钥创建签名。后端验证签名是由正确的帐户创建的，然后更新随机数以防止其被重复使用。有关此过程的更多详细信息，请参阅以<span class="exturl" data-url="aHR0cHM6Ly93d3cudG9wdGFsLmNvbS9ldGhlcmV1bS9vbmUtY2xpY2stbG9naW4tZmxvd3MtYS1tZXRhbWFzay10dXRvcmlhbA==">太坊上基于钱包的身份验证的社区指南</span></p>
+<p>如果您不想自己编写整个登录流程，您还可以使用与您的区块链集成的外部服务。例如，<span class="exturl" data-url="aHR0cHM6Ly9tYWdpYy5saW5rLw==">Magic</span> 基于开放的去<span class="exturl" data-url="aHR0cHM6Ly9tYWdpYy5saW5rL2RvY3MvaW50cm9kdWN0aW9uL2RlY2VudHJhbGl6ZWQtaWQ=">中心化身份 (DID) 标准</span>，通过电子邮件和其他方法提供无密码身份验证 。Magic 的文档 会教你如何在十几个区块链网络进行上述操作。</p>
+<h3 id="帐户和权限"><a class="markdownIt-Anchor" href="#帐户和权限">#</a> 帐户和权限</h3>
+<p>并非所有用户帐户都是平等的，当您设计 minting app 时，您需要一种方法将管理操作限制为帐户子集。</p>
+<p>在链上，这可以使用基于角色的访问控制来完成，你可以给特定角色分配具体的访问和控制权限。如果您使用的是以太坊或与 EVM 兼容的网络，<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9wZW56ZXBwZWxpbi5jb20vY29udHJhY3RzLzQueC9hY2Nlc3MtY29udHJvbA==">OpenZeppelin AccessControl</span> 合约是开始探索更多关于实施帐户和权限的好地方。</p>
+<h3 id="操作员帐户operator"><a class="markdownIt-Anchor" href="#操作员帐户operator">#</a> 操作员帐户（operator）</h3>
+<p>除了为您的用户提供权限完善的账号外，您可能还希望代表您的用户执行某些操作 —— 例如，启动批量代币转移或其他智能合约操作。智能合约标准通常提供 operator 账户代表代币所有者处理代币的方法或者 API。比如 ERC-721 的<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9wZW56ZXBwZWxpbi5jb20vY29udHJhY3RzLzQueC9hcGkvdG9rZW4vZXJjNzIxI0lFUkM3MjEtc2V0QXBwcm92YWxGb3JBbGwtYWRkcmVzcy1ib29sLQ=="> setApprovalForAll</span> 函数 ，授予 operator 帐户转移该 owner 帐户拥有的任何代币的权限。</p>
+<p>这是一项强大的功能，因此您需要格外小心特权帐户的凭据和权限管理。您还应该清楚地向您的用户讲清楚您的平台帐户将具有哪些功能以及如何使用它们。</p>
+<h3 id="结束"><a class="markdownIt-Anchor" href="#结束">#</a> 结束</h3>
+<p>一旦你考虑了这些重要的设计决策，你就可以更好地开始构建和测试你的应用程序 —— 并将其发布给你的用户！</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-02-22 20:55:19" itemprop="dateModified" datetime="2022-02-22T20:55:19+08:00">2022-02-22</time>
+  </span>
+  <span id="2022/02/22/Designing-a-minting-app/" class="item leancloud_visitors" data-flag-title="Designing a minting app" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="waterkitten WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="waterkitten Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="waterkitten PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>waterkitten <i class="ic i-at"><em>@</em></i>waterkitten
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2022/02/22/Designing-a-minting-app/" title="Designing a minting app">http://example.com/2022/02/22/Designing-a-minting-app/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/02/21/Content-persistence/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;api.ixiaowai.cn&#x2F;gqapi&#x2F;gqapi.php?866381" title="Content persistence">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Content persistence</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%81%9A%E9%87%8D%E7%82%B9%E5%86%B3%E7%AD%96"><span class="toc-number">1.</span> <span class="toc-text"> 前期做重点决策</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%B9%B3%E5%8F%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 使用什么平台？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%A0%E9%9C%80%E8%A6%81%E5%90%8E%E7%AB%AF%E5%90%97"><span class="toc-number">1.2.</span> <span class="toc-text"> 你需要后端吗？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"><span class="toc-number">2.</span> <span class="toc-text"> 测试和基础设施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%90%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.</span> <span class="toc-text"> 合同设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E4%B8%8A%E9%80%BB%E8%BE%91"><span class="toc-number">3.1.</span> <span class="toc-text"> 链上逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%8D%87%E7%BA%A7%E6%80%A7"><span class="toc-number">3.2.</span> <span class="toc-text"> 可升级性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83%E4%BD%93%E7%B3%BB"><span class="toc-number">3.3.</span> <span class="toc-text"> 用户认证 &#x2F; 授权体系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E9%92%B1%E5%8C%85%E7%9A%84%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text"> 基于钱包的身份验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%90%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90"><span class="toc-number">5.</span> <span class="toc-text"> 帐户和权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%91%98%E5%B8%90%E6%88%B7operator"><span class="toc-number">6.</span> <span class="toc-text"> 操作员帐户（operator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F"><span class="toc-number">7.</span> <span class="toc-text"> 结束</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="waterkitten"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">waterkitten</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dhdGVya2l0dGVu" title="https:&#x2F;&#x2F;github.com&#x2F;waterkitten"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/19/NFT-basics/" title="NFT basics">NFT basics</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/21/Content-persistence/" title="Content persistence">Content persistence</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/21/Content-addressing/" title="Content addressing">Content addressing</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/22/Designing-a-minting-app/" title="Designing a minting app">Designing a minting app</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/19/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/19/hello-hexo-markdown/" title="ux">ux</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">waterkitten @ waterkitten</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/02/22/Designing-a-minting-app/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
